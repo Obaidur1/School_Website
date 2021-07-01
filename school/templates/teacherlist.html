@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<div id="middlepanel">
+    <div id="UpdatePanel2">
+
+            
+<table style="margin: 0 auto;" width="100%" cellspacing="0" cellpadding="3">
+<tbody><tr>
+<td class="columnStyleTop">
+<span id="ContentPlaceHolder1_lblTitle">কর্মরত শিক্ষক-শিক্ষিকা</span>
+</td>
+</tr>
+<tr>
+<td class="columnStyleLeft">
+<div>
+<table id="ContentPlaceHolder1_grdvTeachers" style="font-family:Noto Sans Bengali;border-collapse:collapse;margin: 0 auto;" cellspacing="0" cellpadding="3">
+<tbody><tr style="color:Black;background-color:#F0F0F0;border-color:#CCCCCC;border-width:1px;border-style:Solid;font-family:Noto Sans Bengali;">
+<th scope="col" valign="middle" align="center">ক্রমিক</th><th scope="col" valign="middle" align="left">ছবি</th><th scope="col" valign="middle" align="left">পিডিএস আইডি<br>নাম<br>মূলপদ</th><th scope="col" valign="middle" align="left">পদবী<br>বর্তমান কর্মস্থলে যোগদান</th><th scope="col" valign="middle" align="left">নিজ জেলা<br>মোবাইল ফোন নম্বর</th>
+</tr>
+{% for teacher in teachers %}
+    <tr>
+            <td style="border-color:#CCCCCC;border-width:1px;border-style:Solid;" align="center">
+                {{forloop.counter}}
+            </td>
+            <td style="border-color:#CCCCCC;border-width:1px;border-style:Solid;" align="left">
+                <img id="ContentPlaceHolder1_grdvTeachers_imgEMp_0" class="fancyzoom" src="{{teacher.image.url}}" style="height: 60px; width: 50px; cursor: pointer;">
+            </td>
+            <td style="border-color:#CCCCCC;border-width:1px;border-style:Solid;" align="left">
+                <span id="ContentPlaceHolder1_grdvTeachers_lblID_0">{{teacher.pdsid}}</span><br>
+                <span id="ContentPlaceHolder1_grdvTeachers_lblName_0">{{teacher.name}}</span><br>
+                <span id="ContentPlaceHolder1_grdvTeachers_lblOrgPost_0">{{teacher.basics}}</span>
+            </td>
+            <td style="border-color:#CCCCCC;border-width:1px;border-style:Solid;" align="left">
+                <span id="ContentPlaceHolder1_grdvTeachers_lblDesig_0">{{teacher.title}}</span><br>
+                <span id="ContentPlaceHolder1_grdvTeachers_lblStationJoin_0">{{teacher.date_of_joining}}</span>
+                
+            </td>
+            <td style="border-color:#CCCCCC;border-width:1px;border-style:Solid;" align="left">
+                <span id="ContentPlaceHolder1_grdvTeachers_lblDist_0">{{teacher.home_district}}</span><br>
+                <span id="ContentPlaceHolder1_grdvTeachers_lblMobile_0">{{teacher.mobile_no}}</span>
+                
+            </td>
+    </tr>
+{%empty%}
+<tr>
+    <td colspan="5" align="center">No teacher here.</td>
+</tr>
+{% endfor %}
+</tbody></table>
+</div>
+
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+
+</tbody></table>
+
+        
+</div>
+</div>
+{% endblock %}

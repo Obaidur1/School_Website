@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+                    <div id="middlepanel">
+                        <div id="UpdatePanel2">
+		
+                                
+    <style type="text/css">
+    
+        .scrollText
+        {
+            padding-left: 10px;
+            background: url(images/img11.png) no-repeat left center;
+            color: #000000;
+            text-decoration: none;
+        }
+        #ahref {
+            text-decoration: none;
+            padding: 3px 9px;
+        }
+        #ahref:hover {
+            text-decoration: none;
+            padding: 3px 9px;
+            background-color: #06a3ff;
+        }
+    </style>
+    <div id="backgroundGrad">
+        <table cellspacing="0" cellpadding="3" width="100%">
+            <tr>
+                <td rowspan="3" style="width: 115px; text-align: left; vertical-align: top;">
+                    <img src="{% static 'images/noticeboard.png' %}" style="width: 100px" />
+                </td>
+                <td style="font-size: 13pt;">
+                    নোটিশ বোর্ড
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-left: 25px;">
+                    <div id="box" style="font-size: 10pt;">
+                        <ul>
+                        <table id="ContentPlaceHolder1_DataList1" cellspacing="0" cellpadding="1" style="border-collapse:collapse;">
+                            {% for n in notics %}                
+                <tr>
+                    <td>
+                        <div id="scrollNews">
+                            <li><a href="notice/{{n.id}}">{{n.title}}</a> </li>
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+		</table>
+                            
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right; padding: 10px 10px 10px 0px;">
+                    <a href="/notice" id="ahref" class="regularButton" >সকল</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div style="height: 10px">
+    </div>
+    <div id="backgroundGrad">
+        <table cellspacing="0" cellpadding="3" width="100%">
+            <tr>
+                <td style="padding-left: 10px; width: 40px;">
+                    খবর :
+                </td>
+                <td>
+                    <marquee behavior="SCROLL" scrolldelay="150" direction="" onmouseover='this.stop();'
+                        onmouseout='this.start();' style="width: 590px;">
+                        <div id="scrollNewsHeader"">
+                            
+                        </div></marquee>
+                </td>
+                <td style="text-align: right; padding: 10px 10px 10px 0px; width: 60px;">
+                    <input type="submit" name="ctl00$ContentPlaceHolder1$btnNews" value="সকল" id="ContentPlaceHolder1_btnNews" class="regularButton" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div style="height: 10px">
+    </div>
+    <div id="backgroundGrad">
+        <table cellspacing="0" cellpadding="3" width="100%">
+            <tr>
+                <td rowspan="3" style="width: 115px; text-align: left; vertical-align: top;">
+                    <img src="images/download.png" style="width: 100px" />
+                </td>
+                <td style="font-size: 13pt;">
+                    ডাউনলোডস
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-left: 25px;">
+                    <div id="box" style="font-size: 10pt;">
+                        <ul>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right; padding: 10px 10px 10px 0px;">
+                    <input type="submit" name="ctl00$ContentPlaceHolder1$btnDownloads" value="সকল" id="ContentPlaceHolder1_btnDownloads" class="regularButton" />
+                </td>
+            </tr>
+        </table>
+    </div>
+
+                            
+	</div>
+                    </div>
+{%endblock%}

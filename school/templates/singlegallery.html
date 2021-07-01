@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block body %}
+<div id="middlepanel">
+    <div id="UpdatePanel2">
+
+<table cellspacing="0" cellpadding="5">
+<tbody><tr>
+<td colspan="2" style="font-size: 12pt; padding-left: 5px;">
+{{Gallery.name}}-{{Gallery.date}}
+</td>
+</tr>
+<tr>
+<td colspan="2" style="padding-left: 5px;">
+<table id="ContentPlaceHolder1_dlPhotoGallery" cellspacing="2" cellpadding="2">
+<tbody><tr>
+    {% for p in photos %}
+<td style="border-color:#CCCCCC;border-width:1px;border-style:Solid;" valign="bottom" align="center">
+    <table>
+        <tbody><tr>
+            <td style="text-align: center">
+                <img id="ContentPlaceHolder1_dlPhotoGallery_Image1_0" class="fancyzoom" alt="{{p.title}}" src="{{p.image.url}}" style="height: 95px; width: 127px; cursor: pointer;">
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</td>
+{% empty %}
+No Photo Here
+{% endfor %}
+</tr>
+</tbody></table>
+</td></tr></tbody></table>
+        
+</div>
+</div>
+
+{% endblock %}

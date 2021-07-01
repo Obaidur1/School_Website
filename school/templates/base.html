@@ -1,0 +1,217 @@
+
+{% load static %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	নাজিমখান উচ্চ বিদ্যালয়
+</title>
+<meta http-equiv="x-frame-options" content="allow">
+
+<link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}" />
+<link href="{% static 'css/StyleSheet.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static 'css/MenuStyle.css' %}" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansbengali.css" />
+    <script type="text/javascript">
+        function pageLoad() {
+            var slide = $find('SSBehaviorID');
+            slide.add_slideChanging(animateSlides);
+            var ae = $find("ae");
+            var be = ae.get_OnLoadBehavior();
+            var an = be.get_animation();
+            fadein = an.get_animations()[1];
+            fadeout = an.get_animations()[0];
+
+            fadein.set_duration(1.0);
+            fadeout.set_duration(1.0);
+        }
+        function animateSlides() {
+            fadein.play();
+            window.setTimeout("fadeout.play()", 6000);
+        }
+    </script>
+    <!------------------------ For Image Zoom ------------------------>
+    <script type="text/javascript" src="{% static 'photoGalleryJavaScripts/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'photoGalleryJavaScripts/jquery.shadow.js' %}"></script>
+    <script type="text/javascript" src="{% static 'photoGalleryJavaScripts/jquery.ifixpng.js' %}"></script>
+    <script type="text/javascript" src="{% static 'photoGalleryJavaScripts/jquery.fancyzoom.min.js' %}"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#demo > a:first').fancyzoom({ Speed: 400, showoverlay: false });
+            $('#demo > a:last').fancyzoom({ Speed: 400, showoverlay: false });
+            $('#nooverlay').fancyzoom({ Speed: 400, showoverlay: false });
+            $('img.fancyzoom').fancyzoom();
+        });
+    </script>
+    <!------------------------------ optional ------------------------>
+    
+    </head>
+<body>
+    <div id="UpdatePanel1">
+            <div id="bodywrap">
+                <div id="header">
+                    <img id="imgBanner" src="" style="height:220px;width:960px;border: 1px outset #EBEBEB;
+                        border-top: none;" />
+                    <div style="text-align: left; top: 35px; left: 50px; position: absolute;">
+                        <!-- <img id="imgMonogram" src="http://automation.sib.gov.bd/monogram/122246.png" align="absmiddle" style="height: 95px;" />
+                     -->
+                    </div>
+                    <div style="text-align: left; top: 135px; left: 50px; position: absolute;">
+                        <table>
+                            <tr>
+                                <td>
+                                    <span id="lblInstName" class="institutionName">নাজিমখান উচ্চ বিদ্যালয়</span><br />
+                                    <span id="lblUpazila" class="institutionName" style="font-size:13pt;">রাজারহাট, কুড়িগ্রাম</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div style="height: 10px;">
+                </div>
+                <ul id="navmenu">
+                    <li><a href="/" style="width: 90px; text-align: center;">প্রথম পাতা</a></li>
+                    <li><a href="#" style="width: 90px; text-align: center">পরিচিতি</a>
+                        <ul>
+                            <li><a href="/at_a_glance" style="width: 150px;">এক নজরে পরিচিতি</a></li>
+                            <li><a href="/history" style="width: 150px;">সংক্ষিপ্ত ইতিহাস</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" style="width: 90px; text-align: center">জনবল</a>
+                        <ul>
+                            <li><a href="/teachers" id="mnuTeachers" style="width: 150px;">শিক্ষক-শিক্ষিকা</a>  </li>
+                            <li><a href="/staffs" style="width: 150px;">কর্মচারী</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" style="width: 90px; text-align: center">শিক্ষার্থী</a>
+                        <ul>
+                            <!-- <li><a href="/student_at_a_glance" style="width: 200px;">অধ্যয়নরত শিক্ষার্থীর
+                                সংখ্যা</a></li> -->
+                            <li><a href="/student_list" style="width: 200px;">অধ্যয়নরত শিক্ষার্থীর
+                                তালিকা</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#" style="width: 130px; text-align: center">পরীক্ষার ফলাফল</a>
+                        <ul>
+                            <li><a href="public-exam-result.aspx" style="width: 200px;">পাবলিক পরীক্ষা</a></li>
+                            <li><a href="http://result.sib.gov.bd/" target="_blank" style="width: 200px;">
+                                বিদ্যালয়ের অভ্যন্তরীণ পরীক্ষা</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/photogalleries" style="width: 110px; text-align: center">
+                        ছবির গ্যালারী</a></li>
+                    <li><a href="/contact_us" style="width: 100px; text-align: center">যোগাযোগ</a></li>
+                </ul>
+                <div id="maincont">
+
+
+                {%block body%} {%endblock%}
+
+
+                <div id="rightSidebar">
+                    <table cellpadding="0" cellspacing="0" style="margin: 0 auto;">
+                        <tr>
+                            <td class="boxHeader" width="220px">
+                                <span id="lblInstDesig">প্রধান শিক্ষক (চঃ দাঃ)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; padding-top: 7px;">
+                                <img id="ImgInstHead" class="fancyzoom" src="{{principal.image.url}}" style="height:200px;width:175px;" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; padding-bottom: 10px;">
+                                <span id="lblInstHead">{{principal.name}}</span>
+                            </td>
+                        </tr>
+                        
+                    </table>
+                    <table cellpadding="0" cellspacing="0" style="margin: 0 auto;">
+                        <tr>
+                            <td class="boxHeader" width="220px">
+                                অভ্যন্তরীণ ই-সেবা
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left; padding-left: 0px;">
+                                <div id="box">
+                                    <ul>
+                                        <li><a href="http://eschool.sib.gov.bd" target="_blank" style="color: #FF0000;">ই-স্কুল</a></li>
+                                        <li><a href="http://automation.sib.gov.bd/" target="_blank">পাঠশালা</a></li>
+                                        <li><a href="http://pds.sib.gov.bd/" target="_blank">পিডিএস (সরকারি মাধ্যমিক)</a></li>
+                                        <li><a href="http://gsa.teletalk.com.bd" target="_blank" style="color: #FF0000;">ভর্তি
+                                            পরীক্ষার আবেদন</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <table cellpadding="0" cellspacing="0" style="margin: 0 auto;">
+                        <tr>
+                            <td class="boxHeader" width="220px">
+                                গুরুত্বপূর্ণ লিংক
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">
+                                <div id="box">
+                                    <ul>
+                                        <li><a href="http://www.moedu.gov.bd/" target="_blank">শিক্ষা মন্ত্রণালয়</a></li>
+                                        <li><a href="http://www.dshe.gov.bd/" target="_blank">মাধ্যমিক ও উচ্চ শিক্ষা অধিদপ্তর</a></li>
+                                        <li><a href="http://www.banbeis.gov.bd/" target="_blank">ব্যানবেইজ</a></li>
+                                        <li><a href="http://www.naem.gov.bd/" target="_blank">নায়েম</a></li>
+                                        <li><a href="http://www.nctb.gov.bd/" target="_blank">এনসিটিবি</a></li>
+                                        <li><a href="http://www.teachers.gov.bd/" target="_blank">শিক্ষক বাতায়ন</a></li>
+                                        <li><a href="http://www.konnect.edu.bd/" target="_blank">কিশোর বাতায়ন</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <table cellpadding="0" cellspacing="0" style="margin: 0 auto;">
+                        <tr>
+                            <td class="boxHeader" width="220px">
+                                ওয়েব মাস্টার
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">
+                                <div id="box">
+                                    <ul>
+                                        <li><a href="/admin" target="_blank">ওয়েব মাস্টার
+                                            লগইন</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="footer">
+                <table cellpadding="0" cellspacing="3" style="margin: 0 auto;" width="100%">
+                    <tr>
+                        <td style="padding-left: 15px; text-align: left; color: #06A3FF;">
+                            কারিগরি সহায়তায়:
+                            <br />
+                            কর্পোরেট সিস্টেম সলিউশনস লিমিটেড
+                            <br />
+                            <b style="font-family: Century Gothic; font-size: 7pt;">Email: anischp@gmail.com</b>
+                        </td>
+                        <td style="text-align: right; padding-right: 15px; color: #06A3FF;">
+                            Developed By
+                            <br />
+                            Md. Abid Hasan Rony
+                            <br />
+                            Depertment of CSE
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+</div>
+
+</body>
+</html>

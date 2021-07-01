@@ -1,0 +1,306 @@
+@font-face
+{
+    font-family: 'NikoshBAN';
+    src: url('/fonts/NikoshBAN.eot');
+    src: local("NikoshBAN"), url('/fonts/NikoshBAN.woff') format('woff'), url('/fonts/NikoshBAN.ttf') format('truetype'), url('/fonts/NikoshBAN.svg#NikoshBAN') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body
+{
+    margin: 0;
+    direction: ltr;
+    font-family: Noto Sans Bengali;
+    font-size: 10pt;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    background: #FFFFFF url(images/bodybg1.png);
+    color: #000000;
+}
+#bodywrap
+{
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+    background-color: #FFFFFF;
+    width: 960px;
+    border-left: 20px solid #FFFFFF;
+    border-right: 20px solid #FFFFFF;
+    border-radius: 0px;
+    box-shadow: 0px 0px 15px 0px #737272;
+}
+#header
+{
+    height: 220px;
+    margin: 0 0 0 0;
+    width: 960px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle; /* Background Color Gradiant  */
+    background: #06A3FF; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#FFFFFF, #06A3FF); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#FFFFFF, #06A3FF); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#FFFFFF, #06A3FF); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#FFFFFF, #06A3FF); /* Standard syntax */
+}
+.institutionName
+{
+    font-family: Noto Sans Bengali;
+    font-size: 22pt;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 2px #000000, 3px 3px 2px #000000;
+}
+#maincont
+{
+    float: left;
+    width: 960px;
+    display: inline;
+    background-color: #FFFFFF;
+    padding: 10px 0 10px 0;
+}
+#middlepanel
+{
+    float: left;
+    width: 725px;
+    padding: 0px;
+}
+#rightSidebar
+{
+    float: right;
+    width: 220px;
+    padding: 0px;
+}
+#footer
+{
+    clear: both;
+    text-align: center;
+    width: 960px;
+    padding: 20px 0px 20px 0px; /*background-color: #EBEBEB;*/
+    position: static;
+    border-top: 5px solid #737272; /* Background Color Gradiant  */
+    background: #EBEBEB; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#FFFFFF, #EBEBEB); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#FFFFFF, #EBEBEB); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#FFFFFF, #EBEBEB); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#FFFFFF, #EBEBEB); /* Standard syntax */
+}
+
+#footer strong
+{
+    color: #000000;
+}
+
+#footer a
+{
+    color: #000000;
+    text-decoration: none;
+}
+
+#footer a:hover
+{
+    color: #000000;
+    text-decoration: underline;
+}
+
+.boxHeader
+{
+    border: none;
+    font-family: Noto Sans Bengali;
+    font-size: 11pt;
+    font-weight: bold;
+    background-color: #06A3FF;
+    color: #FFFFFF;
+    text-align: left;
+    vertical-align: middle;
+    padding: 5px 0px 5px 7px;
+    text-transform: none;
+}
+
+#box
+{
+    padding: 5px 0 5px 10px;
+    font-family: Noto Sans Bengali;
+    font-size: 10pt;
+}
+
+#box ul
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#box li
+{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+#box a:link
+{
+    text-decoration: none;
+}
+
+#box a:hover
+{
+    text-decoration: none;
+    font-weight: bold;
+    color: #06A3FF;
+}
+
+#box li a {
+	padding-left: 10px;
+	background: url(images/img11.png) no-repeat left center;
+	color: #000000;
+	border-bottom: 1px dotted #FF1515;
+}
+.regularButton
+{
+    font-family: Noto Sans Bengali;
+    font-size: 10pt;
+    font-weight: normal;
+    text-align: center;
+    color: #000000;
+    cursor: pointer;
+    padding: 0px 0px 0px 0px;
+    height: 25px;
+    width: 50px;
+    border: 1px solid #CCCCCC;
+    background-color: #CCCCCC;
+}
+
+#backgroundGrad
+{
+    background: #F2F2F2; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#F0F0F0, #FFFFFF); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#F0F0F0, #FFFFFF); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#F0F0F0, #FFFFFF); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#F0F0F0, #FFFFFF); /* Standard syntax */
+    border: 1px dotted #CCCCCC;
+}
+
+/*------------------------ Table Column Style --------------------------*/
+.columnStyleTop
+{
+    border: 1px solid #CCCCCC;
+    font-family: Noto Sans Bengali;
+    font-size: 11pt;
+    font-weight: bold;
+    background-color: #F0F0F0; /*color: #0C090A;*/
+    color: #000000;
+    padding: 0px 0 0 0;
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px;
+    height: 5px;
+}
+.columnStyleLeft
+{
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+    color: #000000;
+    font-family: Noto Sans Bengali;
+    font-size: 10pt;
+    text-align: right;
+    vertical-align: middle;
+    padding-right: 5px;
+}
+.columnStyleRight
+{
+    border-right: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+    color: #0C090A;
+    text-align: left;
+    padding-left: 7px;
+}
+.columnStyleBottom
+{
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+    color: #000000;
+    padding: 5px 0 5px 0;
+}
+/*--------------------------------------------------------------------------------------------------------------*/
+
+.inputControl
+{
+    font-family: Noto Sans Bengali;
+    font-size: 10pt;
+    font-weight: normal;
+    color: #0C090A;
+    padding-left: 5px;
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+}
+.specialButton
+{
+    font-family: Century Gothic;
+    font-size: 11pt;
+    font-weight: bold;
+    color: #06A3FF;
+    cursor: pointer;
+    padding: 0px 0px 0px 0px;
+    height: 35px;
+    width: 75px;
+    border: 1px solid #06A3FF;
+    background-color: #FFFFFF;
+}
+.specialButton:hover
+{
+    font-family: Century Gothic;
+    font-size: 11pt;
+    font-weight: bold;
+    text-align: center;
+    color: #FF0000;
+    cursor: pointer;
+    padding: 0px 0px 0px 0px;
+    height: 35px;
+    width: 75px;
+    border: 1px solid #FF0000;
+    background-color: #FFFFFF;
+}
+.specialButton:focus
+{
+    font-family: Century Gothic;
+    font-size: 11pt;
+    font-weight: bold;
+    text-align: center;
+    color: #FF0000;
+    cursor: pointer;
+    padding: 0px 0px 0px 0px;
+    height: 35px;
+    width: 75px;
+    border: 1px solid #FF0000;
+    background-color: #FFFFFF;
+}
+.specialButtonDisable
+{
+    font-family: Tahoma;
+    font-size: 10.5pt;
+    text-align: center;
+    text-transform: none;
+    color: #0C090A;
+    padding: 0px 0px 0px 0px;
+    height: 30px;
+    width: 75px;
+    border: 1px solid #0C090A;
+}
+.gridViewHeaderStyle
+{
+    background-color: #F0F0F0;
+    /*font-family: Noto Sans Bengali;
+    font-size: 10pt;*/
+    border: 1px solid #CCCCCC;
+    border-bottom: 1px solid #FFFFFF;
+    color: #000000;
+}
+.gridViewItemStyle
+{
+    font-size: 10pt;
+    border: 1px solid #06A3FF;
+}

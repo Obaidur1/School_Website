@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<div id="middlepanel">
+    <div id="UpdatePanel2">
+
+            
+<table cellspacing="0" cellpadding="5">
+<tbody><tr>
+<td colspan="2" style="padding-left: 10px;">
+<span id="ContentPlaceHolder1_lblTitle" style="font-weight: bold;
+text-decoration: underline;">{{notice.title}}</span>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="padding-left: 15px;">
+<span id="ContentPlaceHolder1_lblDetils">{{notice.description}}</span>
+</td>
+</tr>
+<tr id="ContentPlaceHolder1_rowDownload">
+    <td colspan="2" style="text-align: left; padding: 5px 0 5px 5px;">
+        <object data="{{notice.notice_file.url}}" type="application/pdf" width="725px" height="500px">
+            If you are unable to view file, you can download from 
+            <a href="{{notice.notice_file.url}}">here</a> or download <a target="_blank" href="http://get.adobe.com/reader/">Adobe PDF Reader</a> to view the file.
+        </object>
+      </td>
+</tr>
+
+<tr>
+<td colspan="2" style="text-align: left; padding: 5px 0 5px 15px;">
+<span id="ContentPlaceHolder1_lblUpDate" style="font-size:9pt;">Last Update: {{notice.date}}</span>
+</td>
+</tr>
+<tr>
+<td style="text-align: right;">
+<a href="/">প্রথম পাতা</a>
+</td>
+<td style="text-align: left;">
+<a href="/notice">সকল নোটিশ</a>
+</td>
+</tr>
+</tbody></table>
+
+        
+</div>
+</div>
+
+{% endblock body %}

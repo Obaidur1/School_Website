@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<div id="middlepanel">
+    <div id="UpdatePanel2">
+
+            
+<div id="ContentPlaceHolder1_UpdatePanel1">
+    <style>
+        #ahref {
+            text-decoration: none;
+            padding: 3px 9px;
+        }
+        #ahref:hover {
+            text-decoration: none;
+            padding: 3px 9px;
+            background-color: #06a3ff;
+        }
+    </style>
+<table cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td colspan="2" style="text-align: left; padding-left: 10px; font-size: 12pt;">
+    সকল নোটিশ
+</td>
+</tr>
+<tr>
+<td colspan="2" style="padding-left: 10px;">
+    <div>
+<table id="ContentPlaceHolder1_GridView1" style="font-family:Noto Sans Bengali;font-weight:normal;border-collapse:collapse;margin: 0 auto;" cellspacing="0" cellpadding="2">
+    <tbody>
+        <tr class="gridViewHeaderStyle">
+            <th scope="col" align="center">ক্রমিক</th><th scope="col" valign="middle" align="left">বিষয়</th><th scope="col" valign="middle" align="center">তারিখ</th><th scope="col">&nbsp;</th>
+        </tr>
+        {% for n in notics %} 
+        <tr>
+            <td style="border-color:#CCCCCC;border-width:1px;border-style:Solid;font-size:10pt;width:50px;" align="center">{{forloop.counter}}</td>
+            <td style="border-color:#CCCCCC;border-width:1px;border-style:Solid;width:450px;" align="left">
+            <span id="ContentPlaceHolder1_GridView1_lblSubjectTitle_0" style="padding: 5px;">{{n.title}}</span>
+            </td>
+            <td style="border-color:#CCCCCC;border-width:1px;border-style:Solid;font-size:10pt;width:100px;" align="center">{{n.date}}</td>
+            <td style="border-color:#CCCCCC;border-width:1px;border-style:Solid;width:100px;" align="center">
+                <a id="ahref" href="/notice/{{n.id}}">বিস্তারিত</a>
+            </td>
+        </tr>
+        {% empty %}
+        <td colspan="3">No Notice Here</td>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+    
+</td>
+</tr>
+</tbody></table>
+
+</div>
+
+        
+</div>
+</div>
+{% endblock body %}

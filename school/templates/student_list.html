@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div id="middlepanel">
+    <div id="UpdatePanel2">
+        <table style="margin: 0 auto;" width="100%" cellspacing="0" cellpadding="3">
+            <tbody>
+                <tr>
+                    <td colspan="3" class="columnStyleTop">
+                        অধ্যয়নরত শিক্ষার্থীর তালিকা
+                    </td>
+                </tr>
+
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <tr>
+                        <td class="columnStyleLeft" style="font-family: Century Gothic; font-size: 10pt;">
+                            Class :
+                        </td>
+                        <td class="columnStyleRight">
+                            <select name="class" class="inputControl">
+                                <option value="">Select Class</option>
+                                {% for class in classess %}
+                                <option value="{{class.id}}">{{class.name}}</option>
+                                {% endfor %}
+                            </select>
+                        </td>
+                        <td class="columnStyleRight">
+                            <input type="submit" value="Search" class="specialButton">
+                        </td>
+                    </tr>
+                </form>
+                <tr>
+                    <td colspan="3" class="columnStyleLeft">
+
+                        <table style="border-collapse:collapse;margin: 0 auto;" cellspacing="0" cellpadding="3">
+                            <tbody>
+                                <tr>
+                                    {% for s in students %}
+                                    <td style="border-color:#CCCCCC;border-width:1px;border-style:Solid;">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <th
+                                                        style="text-align: left; font-family: Century Gothic; font-size: 9pt;">
+                                                        Photo
+                                                    </th>
+                                                    <th
+                                                        style="text-align: left; font-family: Century Gothic; font-size: 9pt;">
+                                                        Roll No, ID, Name
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: center;">
+                                                        <img id="ContentPlaceHolder1_grdvStudents_imgStd_0"
+                                                            class="fancyzoom" src="{{s.image.url}}"
+                                                            style="height:65px;width:50px;">
+                                                    </td>
+                                                    <td style="text-align: left;">
+                                                        <span id="ContentPlaceHolder1_grdvStudents_lblRollNo_0"
+                                                            style="font-family:Noto Sans Bengali;font-size:9pt;font-weight:bold;">{{s.roll}}</span><br>
+                                                        <span id="ContentPlaceHolder1_grdvStudents_lblID_0"
+                                                            style="font-family:Noto Sans Bengali;font-size:9pt;font-weight:bold;">{{s.id_no}}</span><br>
+                                                        <span id="ContentPlaceHolder1_grdvStudents_lblName_0"
+                                                            style="font-family:Century Gothic;font-size:10pt;font-weight:normal;">{{s.name}}</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    {% if forloop.counter|divisibleby:"3" %}
+                                </tr>
+                                <tr>
+                                    {% endif %}
+                                    {% empty %}
+                                    No student found
+
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td colspan="3"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="columnStyleLeft" colspan="4" style="text-align: center; font-family: Century Gothic;
+font-size: 10pt;">
+                        Total Students : {{students|length}}
+                        <span id="ContentPlaceHolder1_lblTotalStudents"
+                            style="font-family:Noto Sans Bengali;font-size:10pt;font-weight:bold;"></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+</div>
+
+{% endblock %}
